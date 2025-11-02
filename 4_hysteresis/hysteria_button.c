@@ -8,8 +8,6 @@
 #define PWM_WRAP 9u
 #define LED_PIN 3
 #define BUTTON_PIN 9
-#define HYSTERESIS_INPUT_PIN 9
-#define HYSTERESIS_READ_DELAY 2500
 
 volatile int led_mode = 0;
 
