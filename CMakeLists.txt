@@ -28,7 +28,7 @@ pico_add_extra_outputs(hello_pico)
 
 add_executable(arithmetics
     2_arithmetic/arithmetic.c
-    )
+)
 
 target_link_libraries(arithmetics pico_stdlib)
 
@@ -40,7 +40,7 @@ pico_add_extra_outputs(arithmetics)
 ## Arithmetics with history example
 add_executable(arithmetics_history
     3_arithmetic_history/arithmetics.c
-    )
+)
 
 target_link_libraries(arithmetics_history pico_stdlib)
 
@@ -50,13 +50,12 @@ pico_enable_stdio_uart(arithmetics_history 0)
 pico_add_extra_outputs(arithmetics_history)
 
 ## Hysteresis button example
-
+add_subdirectory(pico2w-hysteresis-lib)
 add_executable(hysteria_button
     4_hysteresis/hysteria_button.c
-    4_hysteresis/input_hysteresis.c
-    )
+)
 
-target_link_libraries(hysteria_button pico_stdlib hardware_pwm pico_binary_info)
+target_link_libraries(hysteria_button pico_stdlib hardware_pwm pico_binary_info input_hysteresis)
 
 pico_enable_stdio_usb(hysteria_button 1)
 pico_enable_stdio_uart(hysteria_button 0)

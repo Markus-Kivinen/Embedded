@@ -1,7 +1,7 @@
 # Embedded
 
 ## Getting started
-Repository contains `pico-sdk` as a submodule. After cloning the
+Repository contains `pico-sdk` & `pico2w-hysteresis-lib` as a submodule. After cloning the
 repository, run the following:
 
 ```
