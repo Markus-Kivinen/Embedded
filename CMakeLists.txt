@@ -17,7 +17,10 @@ add_executable(hello_pico
     1_hello_pico/hello_pico.c
 )
 
-target_link_libraries(hello_pico pico_stdlib pico_cyw43_arch_none)
+target_link_libraries(hello_pico pico_stdlib)
+if(TARGET pico_cyw43_arch_none)
+  target_link_libraries(hello_pico pico_cyw43_arch_none)
+endif()
 
 pico_enable_stdio_usb(hello_pico 1)
 pico_enable_stdio_uart(hello_pico 0)
@@ -69,6 +72,9 @@ add_executable(button_counter
 )
 
 target_link_libraries(button_counter pico_stdlib input_hysteresis)
+if(TARGET pico_cyw43_arch_none)
+  target_link_libraries(button_counter pico_cyw43_arch_none)
+endif()
 
 pico_enable_stdio_usb(button_counter 1)
 pico_enable_stdio_uart(button_counter 0)

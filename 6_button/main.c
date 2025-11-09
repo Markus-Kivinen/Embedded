@@ -53,7 +53,7 @@ int main(void) {
       last_count = button_count;
       led_state = true;
       #if defined(CYW43_WL_GPIO_LED_PIN) && (LED_PIN == CYW43_WL_GPIO_LED_PIN)
-        cyw43_arch_gpio_put(true);
+        cyw43_arch_gpio_put(LED_PIN, true);
       #else
         gpio_put(LED_PIN, 1);
       #endif
@@ -61,7 +61,7 @@ int main(void) {
     else if (led_state) {
       led_state = false;
       #if defined(CYW43_WL_GPIO_LED_PIN) && (LED_PIN == CYW43_WL_GPIO_LED_PIN)
-        cyw43_arch_gpio_put(false);
+        cyw43_arch_gpio_put(LED_PIN, false);
       #else
         gpio_put(LED_PIN, 0);
       #endif
