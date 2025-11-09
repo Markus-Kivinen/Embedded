@@ -11,7 +11,7 @@ AllowShortFunctionsOnASingleLine: Empty
 AllowShortLambdasOnASingleLine: Empty
 BreakTemplateDeclarations: Yes
 BreakConstructorInitializers: AfterColon
-IndentPPDirectives: BeforeHash
+IndentPPDirectives: AfterHash
 PointerAlignment: Left
 BreakBeforeBraces: Custom
 BraceWrapping:
