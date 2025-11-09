@@ -14,6 +14,7 @@ Simple Hello World for Pico — initializes the board, prints a greeting, and to
 Basic arithmetic demo — performs and prints simple arithmetic operations.  
 Arithmetic with history — calculator-style example that records and prints a history of operations.  
 Input hysteresis/button demo — demonstrates input hysteresis (debouncing) and button handling.  
+Button - Simple button hit counter
 
 ## Usage
 ```

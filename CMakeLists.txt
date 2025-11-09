@@ -61,3 +61,16 @@ pico_enable_stdio_usb(hysteria_button 1)
 pico_enable_stdio_uart(hysteria_button 0)
 
 pico_add_extra_outputs(hysteria_button)
+
+
+## 6 Button example
+add_executable(button_counter
+    6_button/main.c
+)
+
+target_link_libraries(button_counter pico_stdlib input_hysteresis)
+
+pico_enable_stdio_usb(button_counter 1)
+pico_enable_stdio_uart(button_counter 0)
+
+pico_add_extra_outputs(button_counter)
